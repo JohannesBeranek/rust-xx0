@@ -2,5 +2,13 @@
 name = "xx0"
 version = "0.1.0"
 authors = ["Johannes Beranek <johberanek@gmail.com"]
+publish = false
 
 [dependencies]
+futures = "0.1.1"
+tokio-service = { git = "https://github.com/tokio-rs/tokio-service" }
+env_logger = { version = "0.3.4", default-features = false }
+tokio-minihttp = { git = "https://github.com/tokio-rs/tokio-minihttp" }
+
+[replace]
+"tokio-core:0.1.0" = { git = "https://github.com/tokio-rs/tokio-core" }
