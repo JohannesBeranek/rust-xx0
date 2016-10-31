@@ -4,11 +4,19 @@ version = "0.1.0"
 authors = ["Johannes Beranek <johberanek@gmail.com"]
 publish = false
 
+[[bin]]
+name = "xx0"
+path = "src/main.rs"
+
 [dependencies]
 futures = "0.1.1"
 tokio-service = { git = "https://github.com/tokio-rs/tokio-service" }
 env_logger = { version = "0.3.4", default-features = false }
-tokio-minihttp = { git = "https://github.com/tokio-rs/tokio-minihttp" }
+sha1 = "0.2.0"
+rustc-serialize = "0.3.19"
+
+# custom dependencies
+http = { path = "lib/http" }
 
 [replace]
 "tokio-core:0.1.0" = { git = "https://github.com/tokio-rs/tokio-core" }
